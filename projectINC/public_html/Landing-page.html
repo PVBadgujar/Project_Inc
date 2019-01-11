@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project Inc</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500|Roboto+Mono:400,700|Material+Icons" rel="stylesheet"> 
+  <style>
+   
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+      
+  .container {
+      padding: 80px 80px;
+   
+  }
+ 
+  .carousel-inner img { 
+      width: 100%; 
+      height: 400px;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+
+  
+  .nav-tabs li a {
+      color: white;
+     
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: black;
+      border: 0;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+  
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: white !important;
+      
+  }
+  .navbar-nav li a:hover {
+      color: lightblue !important;
+  }
+  .navbar-nav li.active a {
+      color: lightblue !important;
+      background-color: blue !important;
+  }
+  .navbar-default  {
+      border-color: transparent;
+  }
+ 
+  .open .dropdown-toggle {
+      color: lightblue;
+      background-color: #55ACEE !important;
+     
+  }
+  .dropdown-menu li a {
+      color: white !important;
+      background-color: #55ACEE !important;
+      text-align: center;
+     
+  }
+  .dropdown-menu li a:hover {
+      background-color: #55ACEE !important;
+      color: blue;
+      text-align: center;
+   
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    border-radius: 5px;
+    margin-left: auto;
+    min-width: 150px;
+    background-color: white;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.cardbox {
+     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 85%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    alignment-adjust: central;
+}
+
+.card:hover, .cardbox:hover {
+    box-shadow: 7.5px 7.5px 7.5px 7.5px rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+    padding-top: 10px;
+}
+
+.card-container {
+    padding: 2px 16px;
+   
+    
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+  margin-top: 10px;
+  border-radius: 7.5px;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+  margin-top: 10px;
+    border-radius: 7.5px;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+  margin-top: 10px;
+    border-radius: 7.5px;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+  margin-top: 10px;
+    border-radius: 7.5px;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+  margin-top: 10px;
+    border-radius: 7.5px;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+  
+#custom-nav {
+    color: black;
+    background-color: #55ACEE;
+    border: 0;
+    box-shadow: none;
+    z-index: 99;
+    -webkit-font-smoothing: antialiased;
+     font-weight: bold;
+     font-size: 24px;
+  transition: 0.4s; 
+  position: fixed;
+  width: 85%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7.5px;
+  
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+
+h2 {
+    top: 0;
+    margin-bottom: 15px;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+#custom-nav .dropdown-menu {
+    color: #55ACEE;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-top: 0;
+     font-weight: bold;
+     font-size: 20px;
+}
+#custom-nav .container {
+    color: #55ACEE;
+    padding-top: 5px;
+    padding-bottom: 5px;
+     font-weight: bold;
+     font-size: 20px;
+    -webkit-transition: padding-top .5s ease, padding-bottom .5s ease;
+    -moz-transition: padding-top .5s ease, padding-bottom .5s ease;
+    transition: padding-top .5s ease, padding-top .5s ease, padding-bottom .5s ease;
+}
+#custom-nav.affix {
+    color: #55ACEE;
+    top: 0;
+    min-width: 100%;
+    background-color:black;
+    opacity: 0.9;
+     font-weight: bold;
+     font-size: 20px;
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+@media screen and (max-width: 767px){
+    #wrapwrap {
+        padding-top: 10px;
+    }
+    .navbar-fixed-top {
+        z-index: 999;
+    }
+}
+.footer {
+    padding: auto;
+    text-align: center; 
+}
+.container-footer {
+      background-color: black; 
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+   transition: 0.5s ease;
+  z-index: 99;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+   
+  
+}
+
+.navbar-brand {
+    top: 0;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+.item {
+    height: 520px;
+
+}
+
+</style>
+
+<script>
+//  $(window).scroll(function() {
+  //  if ($(".navbar").offset().top > 200) {
+    //    $('#custom-nav').addClass('affix');
+   //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+   // } else {
+     //   $('#custom-nav').removeClass('affix');
+     //   $(".navbar-fixed-top").removeClass("top-nav-collapse");
+   // } 
+   //  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    //document.getElementById("custom-nav").style.padding = "10px 10px";
+    //document.getElementById("logo").style.fontSize = "30px";
+  //} else {
+    //document.getElementById("custom-nav").style.padding = "70px 10px";
+    //document.getElementById("logo").style.fontSize = "60px";
+  //}
+//});
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (currentScrollPos >  prevScrollpos) {
+    document.getElementById("iconbar").style.left = "0";
+  } else {
+    document.getElementById("iconbar").style.left = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+</script> 
+  
+</head>
+<body>
+
+        
+<nav id="custom-nav" class="navbar navbar-default navbar-fixed-top nav-inverse">
+  <div class="container-fluid first-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle container-fluid" data-toggle="collapse" data-target="#myNavbar">
+        <h4 class="iconbar"></h4>
+        <h4 class="iconbar"></h4>                      
+      </button>
+      <a  class="navbar-brand" href="#"><h2>Logo</h2></a>
+    </div>
+      <div class='nav-container container-fluid'>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li  class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><h4>Sign Up</h4>
+         
+          <ul class="dropdown-menu">
+            <li><a  href="Employee-Signup.html">Employee</a></li>
+            <li><a  href="Employer-Signup.html">Employer</a></li>
+           
+          </ul>
+        </li>
+        <li  class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><h4>Sign In</h4>
+        
+          <ul  class="dropdown-menu">
+            <li><a  href="Employee-Signin.html">Employee</a></li>
+            <li><a  href="Employer-Signin.html">Employer</a></li>
+             <li><a  href="Panel-Signin.html">Panel</a></li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+      </div>
+  </div>
+</nav>
+<br><br><br>
+<div id="myCarousel" class="carousel slide cardbox" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+ <img src="banner1.png" alt="Chicago" width="300" height="400px">         
+      </div>
+
+    </div>
+</div>
+
+<div class="container text-center cardbox">
+  <h3>About Us</h3>
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."m..</p>
+  <br>
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."m..</p>
+  <br>
+  </div>
+  
+<div class="container text-center cardbox">
+  <h3>Uniqueness</h3>
+  <br><br>
+  <div class="col-lg-6">
+      <p><h4>For Employer</h4></p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."m..</p>
+  <br>
+  </div>
+  <div class="col-lg-6">
+  <p><h4>For Employee</h4></p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."m..</p>
+  <br>
+  </div>
+  </div>
+  <div class="container text-center container-fluid cardbox">
+  <h3>Register Here</h3>
+  <br><br>
+  <div class="col-lg-6">
+      <a href="Employer-Signup.html">
+      <div class="card container-fluid">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAKG6BIIViZz6UobQATzyPUr1tJhfQ8DovaoI5KZ1dzAwsSukZ" alt="Avatar" style="width:100%">
+  <div class="card-container container-fluid">
+    <h4><b>Employer</b></h4> 
+  </div>
+</div>
+      </a>
+  <br>
+  </div>
+  <div class="col-lg-6">
+   <a href="Employee-Signup.html">
+      <div class="card container-fluid">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAKG6BIIViZz6UobQATzyPUr1tJhfQ8DovaoI5KZ1dzAwsSukZ" alt="Avatar" style="width:100%">
+  <div class="card-container container-fluid">
+    <h4><b>Employee</b></h4> 
+  </div>
+</div>
+   </a>
+  <br>
+  </div>
+  <br>
+  </div>
+ <div id="iconbar" class="icon-bar container-fluid">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
+  
+</body>
+</html>
